@@ -1,0 +1,2 @@
+Java có cho phép tạo nhiều constructor (overloading constructor), với điều kiện constructor phải có số lượng các tham số khác nhau, nếu
+số lượng các tham số là như nhau thì kiểu dữ liệu của các tham số phải khác nhau.
