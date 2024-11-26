@@ -1,4 +1,4 @@
-
+package hust.soict.ite6.test.disc;
 public class TestPassingParameter {
 
 	public static void main(String[] args) {

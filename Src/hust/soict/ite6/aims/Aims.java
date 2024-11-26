@@ -1,4 +1,4 @@
-
+package hust.soict.ite6.aims;
 public class Aims {
 
 	public static void main(String[] args) {

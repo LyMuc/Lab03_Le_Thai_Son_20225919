@@ -1,4 +1,4 @@
-
+package hust.soict.ite6.aims.store;
 public class Store {
 	public static final int MAX_ITEMS_IN_STORE = 1000;
 	DigitalVideoDisc[] itemsInStore = new DigitalVideoDisc[MAX_ITEMS_IN_STORE];

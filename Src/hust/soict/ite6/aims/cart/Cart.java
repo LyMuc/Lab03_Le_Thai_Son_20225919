@@ -1,4 +1,4 @@
-
+package hust.soict.ite6.aims.cart;
 public class Cart {
 	public static final int MAX_NUMBERS_ORDERED =20;
 	public static final String strCartBillUpper = "***********************CART***********************";
