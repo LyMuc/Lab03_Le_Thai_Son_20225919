@@ -1,84 +1,49 @@
+
 public class DigitalVideoDisc {
-
-    private static int discCount = 0;
-
-    private int duration;
-    private float price;
-    private String name;
-    private String genre;
-    private String producer;
-    private int discID;
-
-    public DigitalVideoDisc(String name) {
-        this.name = name;
-        this.discID = ++discCount;
-    }
-
-    public DigitalVideoDisc(String name, String genre, float price) {
-        this.name = name;
-        this.genre = genre;
-        this.price = price;
-        this.discID = ++discCount;
-    }
-
-    public DigitalVideoDisc(String name, String genre, String producer, float price) {
-        this.name = name;
-        this.genre = genre;
-        this.producer = producer;
-        this.price = price;
-        this.discID = ++discCount;
-    }
-
-    public DigitalVideoDisc(String name, String genre, String producer, int duration, float price) {
-        this.name = name;
-        this.genre = genre;
-        this.producer = producer;
-        this.duration = duration;
-        this.price = price;
-        this.discID = ++discCount;
-    }
-
-    public String getGenre() {
-        return genre;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public float getPrice() {
-        return price;
-    }
-
-    public int getDuration() {
-        return duration;
-    }
-
-    public int getDiscID() {
-        return discID;
-    }
-
-    public String getProducer() {
-        return producer;
-    }
-
-    public void setProducer(String newProducer) {
-        producer = newProducer;
-    }
-
-    public void setDuration(int newDuration) {
-        duration = newDuration;
-    }
-
-    public void setPrice(float newPrice) {
-        price = newPrice;
-    }
-
-    public void setGenre(String newGenre) {
-        genre = newGenre;
-    }
-
-    public void setName(String newName) {
-        name = newName;
-    }
+	private String title;
+	private String category;
+	private String director;
+	private int length;
+	private float cost;
+	public String getTitle() {
+		return title;
+	}
+	public String getCategory() {
+		return category;
+	}
+	public String getDirector() {
+		return director;
+	}
+	public int getLength() {
+		return length;
+	}
+	public float getCost() {
+		return cost;
+	}
+	public DigitalVideoDisc(String title) {
+		super();
+		this.title = title;
+	}
+	public DigitalVideoDisc(String title, String category, float cost) {
+		super();
+		this.title = title;
+		this.category = category;
+		this.cost = cost;
+	}
+	public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
+		super();
+		this.title = title;
+		this.category = category;
+		this.director = director;
+		this.length = length;
+		this.cost = cost;
+	}
+	public DigitalVideoDisc(String title, String category, String director, float cost) {
+		super();
+		this.title = title;
+		this.category = category;
+		this.director = director;
+		this.cost = cost;
+	}
+	
 }
