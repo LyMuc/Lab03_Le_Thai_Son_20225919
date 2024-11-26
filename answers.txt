@@ -1,2 +1,14 @@
-Java có cho phép tạo nhiều constructor (overloading constructor), với điều kiện constructor phải có số lượng các tham số khác nhau, nếu
-số lượng các tham số là như nhau thì kiểu dữ liệu của các tham số phải khác nhau.
+2. Method overloading
+Trong trường hợp này sử dụng varargs sẽ thuận tiện hơn vì không cần phải khai báo mảng trước.
+
+3. Passing parameters
+- Java là ngôn ngữ truyền giá trị.
+- Khi sử dụng hàm swap, 1 bản sao của tham chiếu đến 2 đối tượng DVD sẽ được truyền vào trong hàm swap và hàm này chỉ đổi chỗ
+  2 tham chiếu đó chứ không thật sự đổi chỗ 2 đối tượng DVD nên sau khi thực hiện xong thì tên của các đối tượng vẫn
+  như cũ.
+- Khi sử dụng hàm changeTitle, chúng ta vẫn truyền vào bản sao của tham chiếu đến jungleDVD, và chúng ta đã setTitle 
+  cho jungleDVD thông qua tham chiếu này nên tên của nó đã được đổi.
+
+
+
+
