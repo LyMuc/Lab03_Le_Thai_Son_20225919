@@ -21,6 +21,16 @@ public class Cart {
 	    this.qtyOrdered += 1;
 	    return 1;
 	}
+	
+	public int addDigitalVideoDisc(DigitalVideoDisc dvd1,DigitalVideoDisc dvd2)
+	{
+		int totalAdded=0;
+		
+		totalAdded+=addDigitalVideoDisc(dvd1) ==1 ?1:0;
+		totalAdded+=addDigitalVideoDisc(dvd2)==1?1:0;
+		
+		return(totalAdded);
+	}
 
 	/*public int addDigitalVideoDisc(DigitalVideoDisc [] dvdList)
 	{	
