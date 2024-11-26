@@ -1,6 +1,8 @@
 
 public class Cart {
 	public static final int MAX_NUMBERS_ORDERED =20;
+	public static final String strCartBillUpper = "***********************CART***********************";
+	public static final String strCartBillBottom = "***************************************************";
 	private DigitalVideoDisc itemsOrdered[] = new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
 	private int qtyOrdered;
 	
@@ -118,5 +120,81 @@ public class Cart {
 			cost+=itemsOrdered[i].getCost();
 		}
 		return(cost);
+	}
+	
+	public void printCart()
+	{
+		System.out.println(strCartBillUpper);
+		for(int i=0; i<qtyOrdered; i++)
+		{
+			System.out.print(i+1);
+			printInfoDVD(i);
+		}
+		System.out.println("Total cost: "+ totalCost());
+		System.out.println(strCartBillBottom);
+	}
+	
+	public void printInfoDVD(int i)
+	{
+		System.out.println(". DVD - " + itemsOrdered[i].getTitle() + " - " + itemsOrdered[i].getDirector() + " - "
+					+ toString(itemsOrdered[i].getLength()) + ": " + toString(itemsOrdered[i].getCost()) );
+	}
+	
+	public boolean isMatch(String title)
+	{
+		String[] strWords = title.split("[\\s,;.!]+");
+		int nbMatch=0;
+		
+		for(String word: strWords)
+		{
+			for(int i=0; i<qtyOrdered; i++)
+			{
+				String[] strTitleWords = itemsOrdered[i].getTitle().split("[\\s,;.!]+");
+				for(String titleWord : strTitleWords)
+				{
+					if (titleWord.equals(word)) {
+						nbMatch++;
+						System.out.print(nbMatch);
+						printInfoDVD(i);
+					}
+				}
+			}
+		}
+		if(nbMatch==0) {
+			System.out.println("Disc not found in the cart");
+			return(false);
+		}
+		return(true);
+	}
+	
+	public boolean isMatch(int id)
+	{
+		int nbMatch=0;
+		for(int i=0; i<qtyOrdered; i++)
+		{
+			if(itemsOrdered[i].getId()==id)
+			{
+				nbMatch++;
+				System.out.print(nbMatch);
+				printInfoDVD(i);
+			}
+		}
+		if(nbMatch==0) {
+			System.out.println("Disc not found in the cart");
+			return(false);
+		}
+		return(true);
+	}
+	
+	public String toString(int cartBill)
+	{
+		String cartContent = String.valueOf(cartBill);
+		return (cartContent);
+	}
+	
+	public String toString(float cost)
+	{
+		String cartContent = String.valueOf(cost);
+		return (cartContent);
 	}
 }
