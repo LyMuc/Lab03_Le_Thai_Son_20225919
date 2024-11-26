@@ -4,7 +4,7 @@ public class Cart {
 	private DigitalVideoDisc itemsOrdered[] = new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
 	private int qtyOrdered;
 	
-	public int addDigitalVideoDisc(DigitalVideoDisc disc) {
+	 public int addDigitalVideoDisc(DigitalVideoDisc disc) {
 	    if (this.qtyOrdered == 20) {
 	        System.out.println("The cart is full");
 	        return -1;
@@ -72,8 +72,6 @@ public class Cart {
 	    
 	    return totalAdded > 0 ? totalAdded : -1; // Trả về số lượng DVD đã thêm hoặc -1 nếu không có DVD nào được thêm
 	}
-
-	
 	
 	public int removeDigitalVideoDisc(DigitalVideoDisc disc)
 	{
